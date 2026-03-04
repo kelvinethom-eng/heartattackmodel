@@ -3,8 +3,8 @@ import joblib
 import numpy as np
 import pandas as pd
 
-scaler = joblib.load("artifacts/preprocessor.pkl")
-model = joblib.load("artifacts/model.pkl")
+scaler = joblib.load("preprocessor.pkl")
+model = joblib.load("model.pkl")
 
 FEATURES = [
     "age","sex","cp","trestbps","chol","fbs",
@@ -44,4 +44,5 @@ def main():
             st.success("Low Risk of Heart Attack")
 
 if __name__ == "__main__":
+
     main()
